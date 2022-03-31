@@ -14,7 +14,7 @@ export default function App() {
       subtitle: 'Subtítulo da notícia #01',
       likes: 20,
       read: false,
-      removed: true,
+      removed: false,
     },
     {
       id: Math.random(),
@@ -22,7 +22,7 @@ export default function App() {
       subtitle: 'Subtítulo da notícia #02',
       likes: 10,
       read: true,
-      removed: false,
+      removed: true,
     },
     {
       id: Math.random(),
@@ -49,7 +49,7 @@ export default function App() {
   function handleRemove(postId) {
     setPosts((prevState) =>
       prevState.map((post) =>
-        post.id === postId ? { ...post, removed: true } : post
+        post.id === postId ? { ...post, removed: true, read: true } : post
       )
     );
   }

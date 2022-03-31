@@ -2,12 +2,14 @@ import React from 'react';
 import propTypes from 'prop-types';
 import Button from '../Button';
 
+import { Title } from './styles';
+
 export default function PostHeader(props) {
   return (
     <>
-      <strong>
-        {props.post.read ? <s>{props.post.title}</s> : props.post.title}
-      </strong>
+      <Title read={props.post.read} as='strong'>
+        {props.post.title}
+      </Title>
       <Button onClick={() => props.onRemove(props.post.id)}>Remover</Button>
     </>
   );

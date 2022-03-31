@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Post from '../Post';
 import Header from '../Header';
-import styles from './App.scss';
+import { Title } from './styles';
 
 import { ThemeProvider } from '../../context/ThemeContext';
 
@@ -57,10 +57,10 @@ export default function App() {
   return (
     <ThemeProvider>
       <Header>
-        <h2 className={styles.title}>
+        <Title as='h2'>
           Posts da semana
           <button onClick={handleRefresh}>Atualizar</button>
-        </h2>
+        </Title>
       </Header>
 
       {posts.map((post, index) => (

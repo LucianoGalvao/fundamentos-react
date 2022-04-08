@@ -8,7 +8,7 @@ import themes from './styles/themes';
 
 class App extends React.Component {
   state = {
-    theme: 'light',
+    theme: 'dark',
   }
   
   handleToggleTheme = () => {
